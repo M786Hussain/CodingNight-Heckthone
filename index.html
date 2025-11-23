@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup / Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <!-- Signup Form -->
+    <div id="signupDiv">
+        <h2>Signup</h2>
+        <input type="text" id="signupName" placeholder="Name">
+
+        <input type="email" id="signupEmail" name = 'email' placeholder="Email">
+
+        <input type="password" id="signupPassword" placeholder="Password">
+
+        <button style="background-color: green;" onclick="signup()">Signup</button>
+        
+        <p>Already have an account? <span onclick="showLogin()">Login</span></p>
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginDiv" class="hidden">
+        <h2>Login</h2>
+
+        <input  name = 'email' type="email" id="loginEmail" placeholder="Email">
+
+        <input type="password" id="loginPassword" placeholder="Password">
+
+        <button style="background-color: green;" onclick="login()">Login</button>
+
+        <p>Don't have an account? <span onclick="showSignup()">Signup</span></p>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

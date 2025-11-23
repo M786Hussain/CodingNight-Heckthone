@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Social Feed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div id="welcomeDiv">Welcome, <span id="userName"></span></div>
+    <button id="logoutBtn" onclick="logout()">Logout</button>
+</header>
+
+<section id="createPostSection">
+    <h3>Create Post</h3>
+    <input type="text" id="postText" placeholder="What's on your mind?" style="height: 100px;">
+    <input type="text" id="postImage" placeholder=" Upload Image URL">
+    <button style="background-color: green;" onclick="createPost()">Post</button>
+</section>
+
+<section>
+    <input type="text" id="searchInput" placeholder="Search posts..." onkeyup="searchPosts()">
+    <select id="sortSelect" onchange="sortPosts()">
+        <option value="latest">Latest First</option>
+        <option value="oldest">Oldest First</option>
+        <option value="mostLiked">Most Liked</option>
+    </select>
+</section>
+
+<div id="posts"></div>
+
+<script src="app.js"></script>
+<script>
+    // Optional: minimal style only for Delete buttons to make them visible
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .deleteBtn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .deleteBtn:hover {
+            opacity: 0.8;
+        }
+    `;
+    document.head.appendChild(style);
+</script>
+</body>
+</html>
